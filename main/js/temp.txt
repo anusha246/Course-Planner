@@ -1,0 +1,38 @@
+
+function addCourseToUser(){
+	var course = document.getElementById("searchBar").value;
+	var user = document.getElementById("searchBar").value;
+	var response = "";
+	
+	var url = "http://localhost:8080/api/v1/addCourseToUser?course="+course+"&lecture="+lecture;
+	
+	fetch(url, {
+		method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+		mode: 'cors', // no-cors, *cors, same-origin
+		cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+		credentials: 'omit', // include, *same-origin, omit
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+		}
+	}).then(  
+        function(response) {  
+            if (response.status !== 200) {  
+                console.log("Error:"+response.status);  
+                return;  
+            }
+
+            // Examine the text in the response  
+            response.json().then(function(data) {  
+				courseResponse = data["response"];
+				if (courseResponse == "Course or lecture not found"){
+					document.getElementById("searchError").innerHTML = "<p>Course or lecture for course does not exist</p>";
+				} else {
+					document.getElementById("searchError").innerHTML = courseResponse;
+	}
+            });  
+        }  
+    )
+    .catch(function(err) {  
+        document.write('Fetch Error :-S', err);  
+    });
+}

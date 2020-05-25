@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Graduation Tree</title>
+		<link rel="stylesheet" type="text/css" href="../css/TreeStyle.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="../js/TreeTest.js"></script>
+		<script src="../js/go.js"></script>
+	</head>
+	<body onload="generateTree()">
+	<table>
+	<tr>
+	<td><a href="my_account.html">Profile</a></td>
+	<td><a href="Course Search.html">Course Search</a></td>
+	<td><a href="Graduation.html">Graduation Timetable</a></td>
+	<td><a href="GraduationTree.html">Graduation Planner</a></td>
+	</tr>
+	</table>
+	<div id="contain">
+		<div id="header"><h1>Graduation Tree</h1></div>
+		<div id="options">
+			<label for="course">Add Year to Planner:</label>
+			<input type="button" id="details" value="Add Year" onclick="addYear()"/>
+			<br> 
+			<br> 
+			<div><label for="course">Course Code:</label><input type="text" id="code"/>
+				<input type="button" id="details" value="Details" onclick="details()"/>
+				<input type="button" id="submit" value="Insert" onclick="addCourse()"/></div>
+				<br> 
+			<div><label for="course"> Link From: </label><input type="text" id="link1"/><br> 
+				<br> 
+				<label for="course">  Link To:</label><input type="text" id="link2"/>
+				<input type="button" id="submit" value="Add" onclick="addLink()"/></div>
+				<br> 
+				<button onclick="save()" >Save</button><button onclick="load()">Load</button>
+				<br>
+				<br>
+				<div id="feedback">
+					<div id="courseError"></div>
+					<div id="courseName"></div>
+					<div id="courseYear"></div>
+					<div id="courseSeason"></div>
+					<div id="courseCampus"></div>
+					<div id="courseDist"></div>
+					<div id="courseDep"></div>
+				</div>
+			
+			
+			</div>
+	
+		<div id="gradTree"
+         style="width:800px; height:500px; background-color: #DAE4E4;"></div>
+		
+		
+	<div id="footer">
+		<p>Test for GraduationTree</p>
+	</div>
+	</div>
+	</body>
+</html>

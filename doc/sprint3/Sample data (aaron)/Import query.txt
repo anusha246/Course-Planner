@@ -1,0 +1,8 @@
+As of right now to import the data needed for my query in java to work, use the above file and this:
+LOAD CSV FROM "file:///courses.csv" AS data CREATE (:Course {Code:data[0],Name:data[1],Year: data[2],Semester:data[3]})
+
+To search in html, make sure you type in one of the course codes as shown in the file
+e.g.
+"csc369H5"
+
+Make sure you have the database running, and the java application running to have it function correctly

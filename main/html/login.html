@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="../js/login.js"></script>
+		<title>Course Planner Login</title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body onload="selectLogin()">
+		<div class="userForm" id="Login">
+			<h1>Login to Course Planner</h1>
+				<label>Username:</label>
+				<input class="userInput" type="text" id="username" />
+				<label>Password:</label>
+				<input class="userInput" type="password" id="password" />
+				<p class="userError" id="loginError"></p>
+				<input type="button" id="login" value="Login" onclick="handleLogin()" />
+				<input type="button" onclick="selectRegister()" value="Register for an Account" />
+		</div>
+		
+		<div class="userForm" id="Register">
+			<h1>Register for Course Planner</h1>
+			<table>
+				<tr>
+					<td><input class="name" type="text" id="firstname" placeholder="First Name"/></td>
+					<td><input class="lname" type="text" id="lastname" placeholder="Last Name"/></td>
+				</tr>
+			</table>
+			<input class="userInput" type="text" id="email" placeholder="Email"/>
+			<input class="userInput" type="number" id="age" placeholder="Age"/>
+			
+			<table>
+				<tr>
+					<td>
+						<label>Program:</label>
+						<select id="program">
+							<option value="Computer Science">Computer Science</option>
+							<option value="Statistics">Statistics</option>
+							<option value="Mathematics">Mathematics</option>
+						</select>
+					</td>
+					<td>
+						<input class="userInput" type="number" id="year" placeholder="Year"/>
+					</td>
+				</tr>
+			</table>
+			<input class="userInput" type="text" id="rusername" placeholder="Username"/>
+			<label>Password:</label>
+			<input class="userInput" type="password" id="rpassword" />
+			<label>Confirm Password:</label>
+			<input class="userInput" type="password" id="confirmPass" />
+			<label>Gender:</label>
+			<div id="genderselect" onclick="customGender()">
+				<input type="radio" name="gender" value="male" id="male" /><label for="male">Male</label>
+				<input type="radio" name="gender" value="female" id="female" /><label for="female">Female</label>
+				<input type="radio" name="gender" value="other" id="other" /><label for="other">Other</label>
+			</div>
+			<div id="customGender"></div>
+			<div class="userError" id="registerError"></div>
+			<input type="button" id="register" value="Register" onclick="handleRegister()" />
+			<input type="button" id="registerDone" value="Back to Login" onclick="selectLogin()" />			
+		</div>
+	</body>
+</html>

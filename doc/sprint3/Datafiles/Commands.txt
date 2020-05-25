@@ -1,0 +1,86 @@
+Add Prereqs:
+
+LOAD CSV FROM "file:///prerequisites.csv" AS DATA
+CREATE (:preReq {Code1:DATA[0],Code2:DATA[1]})
+
+Add Courses: 
+
+LOAD CSV FROM "file:///Courses.csv" AS DATA
+CREATE (:course {Code:DATA[0],Name:DATA[1],Season:DATA[2],Year:DATA[3],Campus:DATA[4],Dist:DATA[5],Dep:DATA[6]})
+ 
+Add Students:
+
+LOAD CSV FROM "file:///students.csv" AS DATA
+CREATE (:student {username:DATA[0],password:DATA[1],name:DATA[2],year:DATA[3],major:DATA[4],salt:DATA[5]})
+
+Add Lectures:
+
+LOAD CSV FROM "file:///lecture.csv" AS DATA
+CREATE (:lecture {Code:DATA[0],section:DATA[1],day:DATA[2],timeS:DATA[3],timeF:DATA[4],Room:DATA[5],prof:DATA[6]})
+
+Add Tutorials: 
+
+LOAD CSV FROM "file:///tutorials.csv" AS DATA
+CREATE (:tutorial {Code:DATA[0],section:DATA[1],day:DATA[2],timeS:DATA[3],timeF:DATA[4],Room:DATA[5],TA:DATA[6]})
+
+Add enrolled_in:
+
+
+LOAD CSV FROM "file:///enrolled_in.csv" AS DATA
+CREATE (:enrolled_in {username:DATA[0],course:DATA[1],status:DATA[2],grade:DATA[3]})
+
+
+Add Plans:
+
+LOAD CSV FROM "file:///Plans.csv" AS DATA
+CREATE (:plans {user:DATA[0],course:DATA[1]})
+
+
+______________________________________________________Add Relationship ____________________________________________________
+
+Add PreREq:
+
+MATCH (c:course),(p:preReq),(c1:course) WHERE (c.Code=p.Code1 AND c1.Code=p.Code2) CREATE (c1)-[:PreReq]->(c)
+
+
+Add Plan:
+
+MATCH (s:student),(p:plans),(c:course) WHERE (s.username=p.user AND c.Code=p.course) CREATE (s)-[:plan]->(c)
+
+Add At(lec):
+
+
+MATCH (c:course),(l:lecture) WHERE (c.Code=l.Code) CREATE (c)-[:At]->(l)
+
+Add Has(Tut):
+
+
+MATCH (c:course),(t:tutorial) WHERE (c.Code=t.Code) CREATE (c)-[:Has]->(t)
+
+Add enrolled_in:
+
+MATCH (s:student),(en:enrolled_in),(c:course) WHERE (s.username=en.username AND c.Code=en.course) CREATE (s)-[:enrolled]->(c)
+
+______________________________________________________Delete Types________________________________________________
+
+Match(n:type) DETACH DELETE n;
+
+Example for preReq:
+
+Match(n:preReq) DETACH DELETE n;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

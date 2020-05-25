@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<script src="../js/login.js"></script>
+	<title>My Account</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body onload="getUserInfo()">
+	<table>
+	<tr>
+	<td><a href="my_account.html">Profile</a></td>
+	<td><a href="Course Search.html">Course Search</a></td>
+	<td><a href="Graduation.html">Graduation Timetable</a></td>
+	<td><a href="GraduationTree.html">Graduation Planner</a></td>
+	</tr>
+	</table>
+	<h1><center>My Account</center></h1>
+	<center>
+		<h2>User Information</h2>
+		<div class="container">
+			<div class="floatright">
+			
+				<table>
+					<tr>
+						<td><label id="fname"></label></td>
+						<td><label id="lname"></label></td>
+					</tr>
+					<tr>
+						<td><label id="program"></label></td>
+					</tr>
+					<tr>
+						<td><label id="year"></label></td>
+					</tr>
+					<tr>
+						<td><label id="username"></label></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="updateContainer">
+			<fieldset>
+				<legend>Update Information</legend>
+				<label>Email:</label>
+				<input type="text" id="email" />
+				<br/>
+				<label>New Password:</label>
+				<input type="password" id="newPass" />
+				<br/>
+				<label>Confirm new Password:</label>
+				<input type="password" id="cnewPass" />
+				<br/>
+				<p id="updateError"><p/>
+				<input type="button" id="update" value="Update Information" onclick="updateUser()"/>
+			</fieldset>
+		</div>
+	</center>
+</body>
+
+</html>

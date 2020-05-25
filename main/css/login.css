@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+    font-size: 24px;
+    /* font-family: 'Press Start 2P', cursive; */
+    }
+label{
+    color: #000000;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+body {
+    min-height: 90vh;
+    /* font-family: Roboto, Arial; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: linen;
+}
+
+.userForm{
+	width: 320px;
+    margin-top: 80px;
+    float:left;
+    padding: 10px 55px 40px;
+    background-color: #9cabc9;
+    border: 15px solid white;
+    box-shadow: 0 0 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.userInput{
+    width: 97.7%;
+    height: 34px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    box-shadow: 0 0 5px #00F5FF;
+    border: 2px solid #00F5FF;
+    border-radius: 10px;
+    color: #4f4f4f;
+    font-size: 16px;
+}
+
+#year{
+    margin-top: 5px;
+	margin-bottom: 10px;
+}
+.name{
+	width: 90%;
+	height: 34px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    box-shadow: 0 0 5px #00F5FF;
+    border: 2px solid #00F5FF;
+    border-radius: 10px;
+    color: #4f4f4f;
+    font-size: 16px;
+}
+
+.lname{
+	width: 90%;
+	height: 34px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    box-shadow: 0 0 5px #00F5FF;
+    border: 2px solid #00F5FF;
+    border-radius: 10px;
+    color: #4f4f4f;
+    font-size: 16px;
+	float: right;
+}
+
+.userError{
+	color: red;
+}
+[type=button]{
+	width: 100%;
+    background: linear-gradient(#df1919 10%, #f7980a 100%);
+    border: 1px solid rgb(255, 238, 0);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    text-shadow: 0px 1px 0px #13506D;
+}

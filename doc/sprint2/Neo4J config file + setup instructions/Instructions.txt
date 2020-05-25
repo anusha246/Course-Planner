@@ -1,0 +1,45 @@
+In your directory where you installed neo4j (used same community edition here that was used in a1),
+copy paste the neo4j.conf file into the directory: "...neo4j_directory\conf"
+
+Current port being used is located under "network connector coniguration" header
+If needed, .conf can be opened in notepad
+
+Ports:
+Bolt: 7687
+HTTP: 7474
+HTTPS: 7473
+
+In order to run, ensure port is open on your router and firewall on computer
+
+Firewall (windows):
+- Search for "windows firewall" (Control Panel\System and Security\Windows Defender Firewall)
+- Advanced settings
+- Inbound Rules (lefthand side)
+- New Rule (righthand side)
+- port
+- next
+- TCP
+- Enter in ports mentioned above
+- next
+- allow the connection
+- next
+- allow all networks
+- next
+- give it a name (doesn't matter just for you to see later in case you want to close port)
+- finish
+
+Router (in case ^^ doesn't work):
+- Enter router's IP address in web browser
+    Windows - Open Start, click the Settings gear, click Network & Internet, click View your network properties, and view the address next to "Default gateway"
+    Mac - Open the Apple menu, click System Preferences, click Network, click Advanced, click the TCP/IP tab, and look for the number to the right of "Router:"
+- Enter username and password
+- Find the port forwarding section (under Port Forwarding, Applications, Gaming, Virtual Servers, Firewall, Protected Setup, or advanced settings)
+- TCP
+- Inbound/start: enter ports mentioned
+- Private/End: re-type port numbers here or highest port number
+- Give name/description (doesn't matter)
+- Enter computer's IP address (should be different number in same location as router IP mentioned above)
+- Save/Apply settings
+
+The config file I set up should take care of the rest. Can test with cell phone by entering in your computer's internet ip
+(google "what's my ip" to find this out) followed by the http port number. This should take you to database page.

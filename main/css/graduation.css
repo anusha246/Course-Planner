@@ -1,0 +1,66 @@
+[type=button]{
+    width: 25%;
+    background: linear-gradient(#df1919 10%, #f7980a 100%);
+    border: 1px solid rgb(255, 238, 0);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    text-shadow: 0px 1px 0px #13506D;
+}
+[type=text]{
+    width: 50%;
+    height: 34px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+     box-shadow: 0 0 5px #00F5FF;
+    border: 2px solid #00F5FF;
+    border-radius: 10px;
+    color: #4f4f4f;
+    font-size: 16px;
+}
+
+
+body {
+    background-color: linen;
+}
+
+.timetable{
+    float:left;
+    width:764px;
+}
+.timetable table{
+    background:#FF6347;
+    width:200%;
+}
+
+.timetable td{
+    background:#fafafa;
+    color:#444;
+    text-align:center;
+    padding:35px;
+}
+.timetable td.semesterFall{
+    background:#D2691E;
+    border: 1px solid #D2691E;
+    color: black;
+    font-size: 20px;
+}
+.timetable td.semesterWinter{
+    background:#E0FFFF;
+    border: 1px solid #E0FFFF;
+    color: black;
+    font-size: 20px;
+}
+.timetable td.course{
+    background:#F0FFFF;
+    border: 5px solid black;
+    width:100px;
+}
+.timetable td.over{
+    background:#FBEC88;
+}

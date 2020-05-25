@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<script src="../js/searchbar.js"></script>
+	<script src="../js/prerequisite.js"></script>
+	<script src="../js/no_prerequisite.js"></script>
+	<link rel="stylesheet" href="../css/Course Search.css">
+	<title>Main Page</title>
+</head>
+
+<body>	
+	<table>
+	<tr>
+	<td><a href="my_account.html">Profile</a></td>
+	<td><a href="login.html">Logout</a></td>
+	<td><a href="Course Search.html">Course Search</a></td>
+	<td><a href="Graduation.html">Graduation Timetable</a></td>
+	<td><a href="GraduationTree.html">Graduation Planner</a></td>
+	</tr>
+	</table>
+	
+	<h1><center>Course Search</center></h1>
+
+	<br>
+	<div class="container">
+        <div class="floatLeft">
+			<tr><table>
+				<tr><td class="coursesearchheader">COURSES</td></tr>
+			</table></tr>
+		</div>
+
+		<div class="floatright">
+			<style>
+				table {
+					padding: 6px;
+					border: 1px solid black; 
+					border-collapse: seperate;
+				}
+
+				
+			</style>
+		</div>
+	</div>
+		
+			
+	
+	<div class="searchcontainer" id="searchcontainer">
+        <form class="searchbar" id="searchbar"> 
+          <input id="searchfield" type="text" name="text" class="searchfield" placeholder="Search here!">
+          <input type="submit" name="submitbutton" class="submitbutton" value="Search">
+        </form>
+     </div>
+     <br>
+	<script src="../js/Course Search.js"></script>
+	
+	<h2>Prerequisite Checker</h2>
+	<div class="container">
+        
+
+		<div class="floatright">
+		
+			<table style="width:100%">
+				
+				<div id="prerequisiteSearch">
+					<tr>
+						<td>
+							<div style="overflow:hidden">
+								<div style="border:1px solid black">
+									<label for="search"> <input style="width:100%" type="text" id="prerequisiteSearchBar" name="name" value="Enter course code to search"/>
+									<th>&nbsp;</th><td><input type="button" id="prerequisiteSearchButton" value="Search" onclick="handlePrerequisite()" /></td></tr>
+									<tr id="prerequisiteSearchError"></tr>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</div>
+				
+				<div id="prerequisiteSearch">
+					<tr>
+						<td>
+							<div style="overflow:hidden">
+								<div style="border:1px solid black">
+									<th>&nbsp;</th><td><input type="button" id="noPrerequisiteButton" value="Show courses with no prerequisite" onclick="handleNoPrerequisite()" /></td></tr>
+									<tr id="noPrerequisiteSearchError"></tr>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</div>
+  
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
